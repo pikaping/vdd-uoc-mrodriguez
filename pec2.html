@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualización de datos - PEC 2 - Marc Rodríguez García</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin: 20px 0;
+            color: #0077b6;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+            color: #023e8a;
+        }
+
+        h3 {
+            text-align: center;
+            margin: 20px 0;
+            color: #023e8a;
+        }
+
+        /* Contenedor de visualizaciones */
+        .visualization-container {
+            margin: 20px auto;
+            max-width: 900px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            background: white;
+            padding: 10px;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .visualization-container {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <h1>Visualización de datos - PEC 2</h1>
+    <h3>Marc Rodríguez García</h3>
+    
+    <!-- Treemap -->
+<details>
+    <summary><h2>Treemap - Distribución de población mundial</h2></summary>
+    <div class="visualization-container">
+        <div class='tableauPlaceholder' id='vizTreemap' style='position: relative;'>
+            <noscript>
+                <a href='#'><img alt='Visualicación de datos  - PEC2 v1 ' 
+                    src='https://public.tableau.com/static/images/8T/8TH7T5M47/1_rss.png' 
+                    style='border: none' /></a>
+            </noscript>
+            <object class='tableauViz' style='width: 100%; height: 500px;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='path' value='shared/8TH7T5M47' />
+                <param name='toolbar' value='yes' />
+            </object>
+        </div>
+    </div>
+
+</details>
+<details>
+    <!-- Matrix Plot -->
+    <summary><h2>Matrix Plot - Matriz de correlación de indicadores económicos</h2></summary>
+    <div class="visualization-container">
+        <div class='tableauPlaceholder' id='vizHexagon' style='position: relative;'>
+            <noscript>
+                <a href='#'><img alt='Visualicación de datos - PEC2 v3 ' 
+                    src='https://public.tableau.com/static/images/Vi/Visualicacindedatos-PEC2v3/Sheet1/1_rss.png' 
+                    style='border: none' /></a>
+            </noscript>
+            <object class='tableauViz' style='width: 100%; height: 500px;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='path' value='shared/9DQ2B66CJ' />
+                <param name='toolbar' value='yes' />
+            </object>
+        </div>
+
+    </div>
+
+</details>
+<details>
+    <!-- Hexagon Binning -->
+    <summary><h2>Hexagon Binning - Distribución geográfica de terremotos</h2></summary>
+    <div class="visualization-container">
+        <div class='tableauPlaceholder' id='vizHexagon' style='position: relative;'>
+            <noscript>
+                <a href='#'><img alt='Visualicación de datos - PEC2 v3 ' 
+                    src='https://public.tableau.com/static/images/Vi/Visualicacindedatos-PEC2v3/Sheet1/1_rss.png' 
+                    style='border: none' /></a>
+            </noscript>
+            <object class='tableauViz' style='width: 100%; height: 500px;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='path' value='shared/9DQ2B66CJ' />
+                <param name='toolbar' value='yes' />
+            </object>
+        </div>
+
+    </div>
+</details>
+    <!-- Tableau JavaScript API -->
+    <script type="text/javascript">
+        // Cargar los gráficos de Tableau
+        function loadTableauVisualizations() {
+            const scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            document.body.appendChild(scriptElement);
+        }
+
+        // Ejecutar la carga al terminar de cargar la página
+        window.onload = loadTableauVisualizations;
+    </script>
+</body>
+</html>
